@@ -2,6 +2,8 @@
 
 A simple 'to do' web app developed using PYTHON &amp; DJANGO!
 
+![demo](https://github.com/ermal-abiti/django_ToDoApp/blob/master/todo%20app.gif)
+
 *\*Python >3.0 & Django  2.0>  - required for this project to run on your machine! *
 
 1. Dowload the zip file and unzip it.
