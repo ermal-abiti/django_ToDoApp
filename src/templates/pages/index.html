@@ -1,0 +1,27 @@
+{% extends 'pages/content.html' %}
+
+{% block content %}
+    <div style="text-align: center;">
+        <form class="form-inline" method="POST"> {% csrf_token %}
+            <div class="form-group mx-sm-3 mb-2">
+                {{ form.as_table }}
+            </div>
+            <button type="submit" class="btn btn-success mb-2">Add To Do</button>
+        </form>
+    </div>
+    
+    <br>
+    {% if todos %} 
+        <ul class="list-group"></ul>
+            {% for todo in todos %}
+       
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                {{ todo.name }}
+                <span><a href="todos/{{ todo.id }}/delete"class="btn btn-danger">Delete</a></span>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h5 style="text-align:center;">No todo-s found!</h5>
+    {% endif %}
+{% endblock %}
